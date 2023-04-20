@@ -3,6 +3,7 @@ public class Main {
     public static void main(String[] args)
     {
         String input;
+        int result;
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Hey!");
@@ -17,11 +18,17 @@ public class Main {
 
             if(input.equals("1"))
             {
-                System.out.println("1");
+                System.out.println("Give me three arguments:");
+                System.out.println("1. name of input file with the message to encode");
+
+
+                result = Facade.compress();
+                System.out.println(result);
             }
             else if(input.equals("2"))
             {
-                System.out.println("2");
+                result = Facade.decompress();
+                System.out.println(result);
             }
             else if(input.equals("EXIT"))
             {
