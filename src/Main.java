@@ -4,6 +4,7 @@ public class Main {
     {
         String input;
         int result;
+        String input_name;
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Hey!");
@@ -18,12 +19,12 @@ public class Main {
 
             if(input.equals("1"))
             {
-                System.out.println("Give me three arguments:");
-                System.out.println("1. name of input file with the message to encode");
+                System.out.println("Give me the name of input file with the message to encode");
+                input_name = scanner.nextLine();
 
+                result = Facade.compress(input_name);
 
-                result = Facade.compress();
-                System.out.println(result);
+                System.out.println(result); //0 means there are no errors
             }
             else if(input.equals("2"))
             {

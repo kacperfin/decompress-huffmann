@@ -2,9 +2,9 @@ import com.kacperfin.compressor.Compressor;
 import com.kacperfin.decompressor.Decompressor;
 public class Facade {
 
-    public static int compress()
+    public static int compress(String input_name)
     {
-        return Compressor.compress();
+        return Compressor.compress(input_name);
     }
 
     public static int decompress()
