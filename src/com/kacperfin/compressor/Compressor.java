@@ -6,6 +6,6 @@ public class Compressor {
         String[] command = {"bash", "compress-script.sh", input_name};
         ProcessBuilder pb = new ProcessBuilder(command);
         Process process = pb.start();
-        return process.waitFor(); //0 = no errors, compressed correctly
+        return process.waitFor(); //0 = no errors, script has been executed correctly
     }
 }
