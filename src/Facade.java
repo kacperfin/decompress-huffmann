@@ -6,9 +6,8 @@ public class Facade {
         return Compressor.compress(input_name);
     }
 
-    public static int decompress()
-    {
-        return Decompressor.decompress();
+    public static int decompress(String input_name, String output_name) throws Exception {
+        return Decompressor.decompress(input_name, output_name);
     }
 
 }

@@ -3,7 +3,7 @@ public class Main {
     public static void main(String[] args) throws Exception {
         String input;
         int exitCode;
-        String input_name;
+        String input_name, output_name;
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Hey!");
@@ -18,7 +18,7 @@ public class Main {
 
             if(input.equals("1"))
             {
-                System.out.println("Give me the name of input file with the message to encode.");
+                System.out.println("Give me the name of the input file with the message to encode.");
                 System.out.println("File must be located in the \"files\" folder.");
                 input_name = scanner.nextLine();
 
@@ -35,7 +35,14 @@ public class Main {
             }
             else if(input.equals("2"))
             {
-                exitCode = Facade.decompress();
+                System.out.println("Give me the name of the input file with the message to decode.");
+                System.out.println("File must be located in the \"files\" folder.");
+                input_name = scanner.nextLine();
+                System.out.println("Give me the name of the output file to save the decoded message.");
+                System.out.println("File must be located in the \"files\" folder.");
+                output_name = scanner.nextLine();
+
+                exitCode = Facade.decompress(input_name, output_name);
                 System.out.println(exitCode);
             }
             else if(input.equals("EXIT"))
