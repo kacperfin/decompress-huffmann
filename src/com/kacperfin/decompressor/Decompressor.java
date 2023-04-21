@@ -12,11 +12,8 @@ public class Decompressor {
         ArrayList<String> codes = new ArrayList<String>(513);
         Util.hufDictionaryTxtToArrayList("_dictionary.txt", codes);
         //Util.printCodes(codes);
-        Util.decode(input_name, output_name, codes);
-        //read .huf file from beginning to null character, and do nothing with it
-        //read each byte and write it to txt file as 0s and 1s
-        //read this new 0/1 file recursively to encode it
+        Decode.decode(input_name, output_name, codes);
 
-        return 0; //0 = no errors, decompressed correctly
+        return Decode.decode(input_name, output_name, codes); //0 = no errors, decompressed correctly
     }
 }
